@@ -40,7 +40,7 @@
         <div class="row" v-for="message in messages" v-bind:key="message.id">
           <div class="col-sm">
           <table class="table">
-            <thead class="thead-light">
+            <thead>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">First</th>
@@ -49,16 +49,16 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{message.id}}</td>
-                <td>{{message.sender}}</td>
-                <td>{{message.text}}</td>
+                <th scope="row">1</th>
+                <td>kk</td>
+                <td>llll</td>
               </tr>
             </tbody>
           </table>
-          </div>
         </div>
-      </transition-group>
-    </div>
+      </div>
+    </transition-group>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@aspnet/signalr@1.1.2/dist/browser/signalr.js"></script>
@@ -103,7 +103,7 @@
       .catch(console.error);
 
     function sendMessage(sender, messageText) {
-      return axios.post(`https://signalreventgridintegration.azurewebsites.net/api/walk`, {
+      return axios.post(`https://signalreventgridintegration.azurewebsites.net/api/messages`, {
         sender: sender,
         text: messageText
       }).then(resp => resp.data);
