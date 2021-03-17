@@ -50,7 +50,8 @@
             <tr>
               <td>{{message.id}}</td>
               <td>{{message.sender}}</td>
-              <td>{{message.text['filename']}}</td>
+              <td v-if="message.sender === 'No_ai_analyzed_data'">{{message.text['url']}}</td>
+              <td v-else>{{message.text['filename']}}</td>
             </tr>
           </table>
           </div>
