@@ -106,7 +106,7 @@
     function sendMessage(sender, messageText) {
       return axios.post(`https://signalreventgridintegration.azurewebsites.net/api/walk`, {
         sender: sender,
-        text: messageText
+        text: {messageText}
       }).then(resp => resp.data);
     }
 
