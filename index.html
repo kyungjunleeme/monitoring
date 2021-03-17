@@ -50,7 +50,7 @@
             <tr>
               <td>{{message.id}}</td>
               <td>{{message.sender}}</td>
-              <td v-if="message.sender === 'No_ai_analyzed_data'"><a v-bind:href="{{message.text['url']}}">link</a></td>
+              <td v-if="message.sender === 'No_ai_analyzed_data'"><a href="{{message.text['url']}}" target="_blank">View</a></td>
               <td v-else>{{message.text['filename']}}</td>
             </tr>
           </table>
