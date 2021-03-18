@@ -45,6 +45,7 @@
                 <th scope="col">No.</th>
                 <th scope="col">type</th>
                 <th scope="col">Detail</th>
+                <th scope="col">time</th>
               </tr>
             </thead>
             <tr>
@@ -52,6 +53,7 @@
               <td>{{message.sender}}</td>
               <td v-if="message.sender === 'No_ai_analyzed_data'">{{message.text['url']}}</td>
               <td v-else>{{message.text['filename']}}</td>
+              <td>{{message.text['time']}}</td>
             </tr>
           </table>
           </div>
